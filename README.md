@@ -32,3 +32,22 @@ This repository will be deleted after this semester.
   - We use `pacman::p_load()` from `pacman` package. You need to install from CRAN via `install.packages("pacman")`. 
 - `/src/0_make.R` is sourced in other `.R` files. Therefore, it is not necessary to run `/src/0_make.R` solely. 
 - Execution of `/src/1_visualization.R` and `/src/2_analysis.R` is sufficient to replicate the results. 
+
+
+## Variable Description
+
+- Descriptions of variables created in `/src/0_make.R` and/or used in our analysis
+
+| Name               | Description                                                                                           |
+|:-------------------|:------------------------------------------------------------------------------------------------------|
+| trust_people       | Categorical variable taking values of 0 (can't be too carreful) to 10 (most people can be trusted)    |
+| has_sns_account    | 1 if an individual has (any) online social network account                                            |
+| income             | Yearly total personal income, net                                                                     |
+| life_satisfaction  | Categorical variable taking values of 0 (not at all satisfied) to 10 (completely satisfied)           |
+| edyear19           | Years of Education based on ISCED Classification                                                      |
+| age19 　　　　　      　    | Years of Education based on ISCED Classification                                                      |
+| age19_2 　　　　　      　  | Age squared (age19 ^ 2)                                                                               |
+
+
+
+
