@@ -3,7 +3,7 @@
 ## About 
 - This is a repository of Microeconometrics project. 
 - This `README.md` can be easily read from the GitHub repository: 
-  - https://github.com/TakaakiKishida/microeconometrics_hec_2023/edit/main/README.md
+  - https://github.com/TakaakiKishida/microeconometrics_hec_2023
 
 ## Names (ID)
 - Takaaki Kishida (22418495)
