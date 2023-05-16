@@ -47,4 +47,5 @@ This repository will be deleted after this semester.
 | edyear19           | Years of Education based on ISCED Classification                                                      |
 | age19 　　　　　      　    | Years of Education based on ISCED Classification                                                      |
 | age19_2 　　　　　      　  | Age squared (age19 ^ 2)                                                                               |
-| pdate19 　　　　　      　  | Date of personal interview                                                                            |
+| pdate19 　　　　　      　  | Date of personal interview (used for fixed effect)                                                    |
+| idhous19 　　　　　     　  | Identification number of household (used for clustering standard errors)                              |
