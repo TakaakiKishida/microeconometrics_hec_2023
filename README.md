@@ -28,8 +28,8 @@ This repository will be deleted after this semester.
 ## 2. Guidance on Replicating Results
 - Code was executed successfully as of May 22, 2023. 
 - To work with our code, you need to open the `.Rproj` file. 
-- Required packages were installed/loaded in the beginning of each `.R` file. 
   - This also allows you to `here::here()`. 
+- Required packages were installed/loaded in the beginning of each `.R` file. 
   - We use `pacman::p_load()` from `pacman` package. You need to install from CRAN via `install.packages("pacman")`. 
 - `/src/0_make.R` is sourced in other `.R` files. Therefore, it is not necessary to run `/src/0_make.R` solely. 
 - Execution of `/src/1_visualization.R` and `/src/2_analysis.R` is sufficient to replicate the results. 
