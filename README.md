@@ -41,12 +41,12 @@ This repository will be deleted after this semester.
 
 | Name               | Description                                                                                           |
 |:-------------------|:------------------------------------------------------------------------------------------------------|
-| trust_people       | Categorical variable taking values of 0 (can't be too carreful) to 10 (most people can be trusted)    |
-| has_sns_account    | 1 if an individual has (any) online social network account                                            |
+| trust_people     　 　| Categorical variable taking values of 0 (can't be too carreful) to 10 (most people can be trusted)    |
+| has_sns_account  　　 | 1 if an individual has (any) online social network account                                            |
 | income             | Yearly total personal income, net                                                                     |
-| life_satisfaction  | Categorical variable taking values of 0 (not at all satisfied) to 10 (completely satisfied)           |
-| edyear19           | Years of Education based on ISCED Classification                                                      |
-| age19 　　　　　      　    | Years of Education based on ISCED Classification                                                      |
-| age19_2 　　　　　      　  | Age squared (age19 ^ 2)                                                                               |
-| pdate19 　　　　　      　  | Date of personal interview (used for fixed effect)                                                    |
-| idhous19 　　　　　     　  | Identification number of household (used for clustering standard errors)                              |
+| life_satisfaction　　　　| Categorical variable taking values of 0 (not at all satisfied) to 10 (completely satisfied)           |
+| edyear19        　　  | Years of Education based on ISCED Classification                                                      |
+| age19 　　　　　      　 　　  | Years of Education based on ISCED Classification                                                      |
+| age19_2 　　　　　      　 　　| Age squared (age19 ^ 2)                                                                               |
+| pdate19 　　　　　     　　　  | Date of personal interview (used for fixed effect)                                                    |
+| idhous19 　　　　　   　 　　  | Identification number of household (used for clustering standard errors)                              |
