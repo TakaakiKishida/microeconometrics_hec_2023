@@ -35,7 +35,7 @@ This repository will be deleted after this semester.
 - Execution of `/src/1_visualization.R` and `/src/2_analysis.R` is sufficient to replicate the results. 
 
 
-## Variable Description
+## 3. Variable Description
 
 - Descriptions of variables used in our analysis　(some of them are created in `/src/0_make.R`)
 
