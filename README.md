@@ -37,7 +37,7 @@ This repository will be deleted after this semester.
 
 ## 3. Variable Description
 
-- Descriptions of variables used in our analysis　(some of them are created in `/src/0_make.R`)
+- Descriptions of variables used in our analysis (some of them are created in `/src/0_make.R`)
 
 | Name               | Description                                                                                           |
 |:-------------------|:------------------------------------------------------------------------------------------------------|
