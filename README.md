@@ -12,10 +12,6 @@
   - https://github.com/TakaakiKishida/microeconometrics_hec_2023
 
 
-## Note
-This repository will be deleted after this semester. 
-
-
 ## 1. Directory Structure
 - `/data` contains the dataset of the Swiss Household Panel (SHP) data provided at class.
 
@@ -37,7 +33,7 @@ This repository will be deleted after this semester.
 
 ## 3. Variable Description
 
-- Descriptions of variables used in our analysis　(some of them are created in `/src/0_make.R`)
+- Descriptions of variables used in our analysis (some of them are created in `/src/0_make.R`)
 
 | Name               | Description                                                                                           |
 |:-------------------|:------------------------------------------------------------------------------------------------------|
@@ -49,4 +45,9 @@ This repository will be deleted after this semester.
 | age19 　　　　　      　 　　  | Years of Education based on ISCED Classification                                                      |
 | age19_2 　　　　　      　 　　| Age squared (age19 ^ 2)                                                                               |
 | pdate19 　　　　　     　　　  | Date of personal interview (used for fixed effect)                                                    |
-| idhous19 　　　　　   　 　　  | Identification number of household (used for clustering standard errors)                              |
+| idhous19 　　　     　　　  | Identification number of household (used for clustering standard errors)                              |
+
+
+## Note
+- This repository will be deleted after this semester. 
+- Comment out is used to make sections and subsections displayed in RStudio. Thus, code is more readable with ToC opened at the top right of the RStudio screen. 
