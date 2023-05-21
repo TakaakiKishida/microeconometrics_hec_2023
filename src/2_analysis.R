@@ -103,8 +103,6 @@ stargazer::stargazer(op1, op2, ol1, ol2,
                      no.space = TRUE)
 
 
-# ============================ #
-
 ### 2.1.1 Marginal Effects ----
 
 # In the predict() function for the model from the MASS::polr(), 
@@ -143,25 +141,25 @@ mean(ol2_predict_educ - ol2_predict, na.rm = TRUE)
 ## 2.2. By Age ----
 
 op_young <- polr(as.factor(trust_people) ~ 
-              has_sns_account + log(income) + edyear19 + age19 + life_satisfaction,
+              has_sns_account + is_female + log(income) + edyear19 + age19 + life_satisfaction,
             data = df_sub_young,
             Hess = TRUE,
             method = "probit")
 
 ol_young <- polr(as.factor(trust_people) ~ 
-              has_sns_account + log(income) + edyear19 + age19 + life_satisfaction,
+              has_sns_account + is_female + log(income) + edyear19 + age19 + life_satisfaction,
             data = df_sub_young,
             Hess = TRUE,
             method = "logistic")
 
 op_old <- polr(as.factor(trust_people) ~ 
-              has_sns_account + log(income) + edyear19 + age19 + life_satisfaction,
+              has_sns_account + is_female + log(income) + edyear19 + age19 + life_satisfaction,
             data = df_sub_old,
             Hess = TRUE,
             method = "probit")
 
 ol_old <- polr(as.factor(trust_people) ~ 
-              has_sns_account + log(income) + edyear19 + age19 + life_satisfaction,
+              has_sns_account + is_female + log(income) + edyear19 + age19 + life_satisfaction,
             data = df_sub_old,
             Hess = TRUE,
             method = "logistic")
@@ -172,5 +170,46 @@ stargazer::stargazer(op_young, ol_young, op_old, ol_old,
                      no.space = TRUE)
 
 
-# causal vs correlation statement
+### 2.2.1 Marginal Effects ----
 
+# Make counterfactual datasets: 
+
+# When years of life satisfaction (0-10 scale) increased by 1 point
+## Young
+df_sub_young_hypoth_satis <- df_sub_young %>% 
+  dplyr::mutate(life_satisfaction = life_satisfaction + 1) 
+# Old
+df_sub_old_hypoth_satis <- df_sub_old %>% 
+  dplyr::mutate(life_satisfaction = life_satisfaction + 1) 
+
+# When years of education increased by 1 year
+## Young
+df_sub_young_hypoth_educ <- df_sub_young %>% 
+  dplyr::mutate(edyear19 = edyear19 + 1) 
+# Old
+df_sub_old_hypoth_educ <- df_sub_old %>% 
+  dplyr::mutate(edyear19 = edyear19 + 1) 
+
+# Obtain predictions: Probit
+op2_predict <- predict(op_young, newdata = df_sub_young, type = "probs")
+op2_predict_satis_young <- predict(op_young, newdata = df_sub_young_hypoth_satis, type = "probs")
+op2_predict_satis_old <- predict(op_young, newdata = df_sub_old_hypoth_satis, type = "probs")
+op2_predict_educ_young <- predict(op_young, newdata = df_sub_young_hypoth_educ, type = "probs")
+op2_predict_educ_old <- predict(op_young, newdata = df_sub_old_hypoth_educ, type = "probs")
+
+# Obtain predictions: Logit
+ol2_predict <- predict(ol_young, newdata = df_sub_young, type = "probs")
+ol2_predict_satis_young <- predict(ol_young, newdata = df_sub_young_hypoth_satis, type = "probs")
+ol2_predict_satis_old <- predict(ol_old, newdata = df_sub_old_hypoth_satis, type = "probs")
+ol2_predict_educ_young <- predict(ol_young, newdata = df_sub_young_hypoth_educ, type = "probs")
+ol2_predict_educ_old <- predict(ol_old, newdata = df_sub_old_hypoth_educ, type = "probs")
+
+# Subtract probs resulting from the original dataset from counterfactual dataset
+mean(ol2_predict_satis_young - ol2_predict, na.rm = TRUE)
+mean(ol2_predict_satis_old - ol2_predict, na.rm = TRUE)
+
+mean(ol2_predict_educ_young - ol2_predict, na.rm = TRUE)
+mean(ol2_predict_educ_old - ol2_predict, na.rm = TRUE)
+
+# mean(ol2_predict_satis - ol2_predict, na.rm = TRUE)
+# mean(ol2_predict_educ - ol2_predict, na.rm = TRUE)
