@@ -48,6 +48,12 @@ etable(m1, m2, m3,
 
 ## 1.2. By Age ----
 
+df_sub_young %>% 
+  summarize(mean = mean(has_sns_account, na.rm = T))
+
+df_sub_old %>% 
+  summarize(mean = mean(has_sns_account, na.rm = T))
+
 # Model 1
 m_age1 <- df_sub_young %>% 
   feols(trust_people ~ 
