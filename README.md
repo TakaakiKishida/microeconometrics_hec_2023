@@ -13,7 +13,8 @@
 
 
 ## 1. Directory Structure
-- `/data` contains the dataset of the Swiss Household Panel (SHP) data provided at class.
+- `/data` contains the dataset of the Swiss Household Panel (SHP) data `SHP.Rdat` provided at class.
+  - Note that since the total file size exceeds 5MB, `SHP.Rdat` is not included in the submitted zip file. 
 
 - `/src` contains all `.R` scripts needed to produce the results. 
   - `/0_make.R` reads data from `/output` and creates dataset for our analysis.
